@@ -51,7 +51,7 @@ The image will be shown as below in nice x & y graph which will be helpful while
 ![xyImage](assets/1.png)
 
 
-2. **ROI Definition:** Detecting the size of image, then define the ROI which is the lane I would be mark its boarder later, by defining 3 points forming triangular shape.
+2. **ROI Definition:** Detecting the size of image, then define the ROI which is the lane I would be marking its boarder later, by defining 3 points forming triangular shape.
 
 
 ```python
@@ -97,7 +97,7 @@ cropped_image = region_of_interest(
 ```
 ![grayscaleImg](assets/4.png)
 
-6. **Line Detection** In order to generate lines from the pixels forming edges in the last image I used Hough Line Transform algorithm which essentially by using hough space transform each 
+6. **Line Detection** In order to generate lines from the pixels forming edges in the last image I used Hough Line Transform algorithm which essentially transform the points in image space to lines in hough space and then voting lines by the intersection formed between those lines. 
 
 ```python
 lines = cv2.HoughLinesP(
